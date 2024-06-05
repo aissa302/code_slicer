@@ -1,0 +1,247 @@
+:ID,:LABEL,METHOD_FULL_NAME:string,NAME:string,SIGNATURE:string,ARGUMENT_INDEX:int,ARGUMENT_NAME,CODE:string,COLUMN_NUMBER:int,DISPATCH_TYPE:string,DYNAMIC_TYPE_HINT_FULL_NAME,LINE_NUMBER:int,ORDER:int,POSSIBLE_TYPES,TYPE_FULL_NAME:string,CONTROL_STRUCTURE_TYPE:string,PARSER_TYPE_NAME:string,AST_PARENT_FULL_NAME:string,AST_PARENT_TYPE:string,COLUMN_NUMBER_END:int,FILENAME:string,FULL_NAME:string,HASH,IS_EXTERNAL:boolean,LINE_NUMBER_END:int,OFFSET,OFFSET_END,TYPE_DECL_FULL_NAME:string,CLOSURE_BINDING_ID,COLUMN_NUMBER,CONTENT:string,LINE_NUMBER,LANGUAGE:string,OVERLAYS:string[],ROOT:string,VERSION:string,EVALUATION_STRATEGY:string,INDEX:int,IS_VARIADIC:boolean,ALIAS_TYPE_FULL_NAME,INHERITS_FROM_TYPE_FULL_NAME,CONTAINED_REF:string
+33,BINDING,badSink,badSink,void badSink (wchar_t*),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+69,BINDING,Free_Pointer,Free_Pointer,void Free_Pointer (ANY),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15,CALL,<operator>.notEquals,<operator>.notEquals,,2.0,,*data != L'\0',12.0,STATIC_DISPATCH,,5.0,2.0,,<empty>,,,,,,,,,,,,,,,,,,,,,,,,,,,
+16,CALL,<operator>.indirection,<operator>.indirection,,1.0,,*data,12.0,STATIC_DISPATCH,,5.0,1.0,,<empty>,,,,,,,,,,,,,,,,,,,,,,,,,,,
+19,CALL,<operator>.postIncrement,<operator>.postIncrement,,3.0,,data++,28.0,STATIC_DISPATCH,,5.0,3.0,,<empty>,,,,,,,,,,,,,,,,,,,,,,,,,,,
+23,CALL,<operator>.equals,<operator>.equals,,-1.0,,*data == SEARCH_CHAR,11.0,STATIC_DISPATCH,,7.0,1.0,,<empty>,,,,,,,,,,,,,,,,,,,,,,,,,,,
+24,CALL,<operator>.indirection,<operator>.indirection,,1.0,,*data,11.0,STATIC_DISPATCH,,7.0,1.0,,<empty>,,,,,,,,,,,,,,,,,,,,,,,,,,,
+28,CALL,printLine,printLine,,-1.0,,"printLine(""We have a match!"")",9.0,STATIC_DISPATCH,,9.0,1.0,,<empty>,,,,,,,,,,,,,,,,,,,,,,,,,,,
+38,CALL,<operator>.assignment,<operator>.assignment,,-1.0,,data = (wchar_t *)malloc(100*sizeof(wchar_t)),3.0,STATIC_DISPATCH,,19.0,2.0,,<empty>,,,,,,,,,,,,,,,,,,,,,,,,,,,
+40,CALL,<operator>.cast,<operator>.cast,,2.0,,(wchar_t *)malloc(100*sizeof(wchar_t)),10.0,STATIC_DISPATCH,,19.0,2.0,,<empty>,,,,,,,,,,,,,,,,,,,,,,,,,,,
+42,CALL,malloc,malloc,,2.0,,malloc(100*sizeof(wchar_t)),21.0,STATIC_DISPATCH,,19.0,2.0,,<empty>,,,,,,,,,,,,,,,,,,,,,,,,,,,
+43,CALL,<operator>.multiplication,<operator>.multiplication,,1.0,,100*sizeof(wchar_t),28.0,STATIC_DISPATCH,,19.0,1.0,,<empty>,,,,,,,,,,,,,,,,,,,,,,,,,,,
+45,CALL,<operator>.sizeOf,<operator>.sizeOf,,2.0,,sizeof(wchar_t),32.0,STATIC_DISPATCH,,19.0,2.0,,<empty>,,,,,,,,,,,,,,,,,,,,,,,,,,,
+48,CALL,<operator>.equals,<operator>.equals,,-1.0,,data == NULL,7.0,STATIC_DISPATCH,,20.0,1.0,,<empty>,,,,,,,,,,,,,,,,,,,,,,,,,,,
+52,CALL,exit,exit,,-1.0,,exit(-1),22.0,STATIC_DISPATCH,,20.0,1.0,,<empty>,,,,,,,,,,,,,,,,,,,,,,,,,,,
+53,CALL,<operator>.minus,<operator>.minus,,1.0,,-1,27.0,STATIC_DISPATCH,,20.0,1.0,,<empty>,,,,,,,,,,,,,,,,,,,,,,,,,,,
+55,CALL,<operator>.assignment,<operator>.assignment,,-1.0,,data[0] = L'\0',3.0,STATIC_DISPATCH,,21.0,4.0,,<empty>,,,,,,,,,,,,,,,,,,,,,,,,,,,
+56,CALL,<operator>.indirectIndexAccess,<operator>.indirectIndexAccess,,1.0,,data[0],3.0,STATIC_DISPATCH,,21.0,1.0,,<empty>,,,,,,,,,,,,,,,,,,,,,,,,,,,
+60,CALL,wcscpy,wcscpy,,-1.0,,"wcscpy(data, SOURCE_STRING)",3.0,STATIC_DISPATCH,,22.0,5.0,,<empty>,,,,,,,,,,,,,,,,,,,,,,,,,,,
+63,CALL,<operator>.assignment,<operator>.assignment,,-1.0,,badStatic = 1,3.0,STATIC_DISPATCH,,23.0,6.0,,<empty>,,,,,,,,,,,,,,,,,,,,,,,,,,,
+66,CALL,basSink,basSink,,-1.0,,basSink(data),3.0,STATIC_DISPATCH,,24.0,7.0,,<empty>,,,,,,,,,,,,,,,,,,,,,,,,,,,
+6,BLOCK,,,,-1.0,,<empty>,1.0,,,1.0,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+9,BLOCK,,,,-1.0,,"{
+  if(basStatic)
+  {
+    for (; *data != L'\0'; data++)
+    {
+      if (*data == SEARCH_CHAR)
+      {
+        printLine(""We have a match!"")
+        break;
+      }
+    }
+    free(data)
+  }
+}",1.0,,,2.0,2.0,,void,,,,,,,,,,,,,,,,,,,,,,,,,,,
+12,BLOCK,,,,-1.0,,"{
+    for (; *data != L'\0'; data++)
+    {
+      if (*data == SEARCH_CHAR)
+      {
+        printLine(""We have a match!"")
+        break;
+      }
+    }
+    free(data)
+  }",3.0,,,4.0,2.0,,void,,,,,,,,,,,,,,,,,,,,,,,,,,,
+14,BLOCK,,,,-1.0,,<empty>,5.0,,,5.0,1.0,,void,,,,,,,,,,,,,,,,,,,,,,,,,,,
+21,BLOCK,,,,4.0,,"{
+      if (*data == SEARCH_CHAR)
+      {
+        printLine(""We have a match!"")
+        break;
+      }
+    }",5.0,,,6.0,4.0,,void,,,,,,,,,,,,,,,,,,,,,,,,,,,
+27,BLOCK,,,,-1.0,,"{
+        printLine(""We have a match!"")
+        break;
+      }",7.0,,,8.0,2.0,,void,,,,,,,,,,,,,,,,,,,,,,,,,,,
+36,BLOCK,,,,-1.0,,"{
+  wchar_t * data;
+  data = (wchar_t *)malloc(100*sizeof(wchar_t));
+  if (data == NULL) {exit(-1);}
+  data[0] = L'\0';
+  wcscpy(data, SOURCE_STRING);
+  badStatic = 1;
+  basSink(data);
+}",1.0,,,17.0,2.0,,void,,,,,,,,,,,,,,,,,,,,,,,,,,,
+51,BLOCK,,,,-1.0,,{exit(-1);},21.0,,,20.0,2.0,,void,,,,,,,,,,,,,,,,,,,,,,,,,,,
+88,BLOCK,,,,-1.0,,<empty>,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+97,BLOCK,,,,1.0,,<empty>,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+101,BLOCK,,,,1.0,,<empty>,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+105,BLOCK,,,,1.0,,<empty>,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+110,BLOCK,,,,1.0,,<empty>,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+114,BLOCK,,,,1.0,,<empty>,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+119,BLOCK,,,,1.0,,<empty>,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+124,BLOCK,,,,1.0,,<empty>,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+128,BLOCK,,,,1.0,,<empty>,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+133,BLOCK,,,,1.0,,<empty>,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+137,BLOCK,,,,1.0,,<empty>,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+141,BLOCK,,,,1.0,,<empty>,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+145,BLOCK,,,,1.0,,<empty>,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+150,BLOCK,,,,1.0,,<empty>,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+155,BLOCK,,,,1.0,,<empty>,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+159,BLOCK,,,,1.0,,<empty>,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+10,CONTROL_STRUCTURE,,,,-1.0,,if (basStatic),3.0,,,3.0,1.0,,,IF,CASTIfStatement,,,,,,,,,,,,,,,,,,,,,,,,,
+13,CONTROL_STRUCTURE,,,,-1.0,,for (;*data != L'\0';data++),5.0,,,5.0,1.0,,,FOR,CASTForStatement,,,,,,,,,,,,,,,,,,,,,,,,,
+22,CONTROL_STRUCTURE,,,,-1.0,,if (*data == SEARCH_CHAR),7.0,,,7.0,1.0,,,IF,CASTIfStatement,,,,,,,,,,,,,,,,,,,,,,,,,
+30,CONTROL_STRUCTURE,,,,-1.0,,break;,9.0,,,10.0,2.0,,,BREAK,CASTBreakStatement,,,,,,,,,,,,,,,,,,,,,,,,,
+47,CONTROL_STRUCTURE,,,,-1.0,,if (data == NULL),3.0,,,20.0,3.0,,,IF,CASTIfStatement,,,,,,,,,,,,,,,,,,,,,,,,,
+5,METHOD,,<global>,,,,<global>,1.0,,,1.0,1.0,,,,,badSink.c:<global>,TYPE_DECL,1.0,badSink.c,badSink.c:<global>,,False,25.0,,,,,,,,,,,,,,,,,
+7,METHOD,,badSink,void badSink (wchar_t*),,,"static void badSink(wchar_t * data)
+{
+  if(basStatic)
+  {
+    for (; *data != L'\0'; data++)
+    {
+      if (*data == SEARCH_CHAR)
+      {
+        printLine(""We have a match!"")
+        break;
+      }
+    }
+    free(data)
+  }
+}",1.0,,,1.0,1.0,,,,,badSink.c:<global>,TYPE_DECL,1.0,badSink.c,badSink,,False,15.0,,,,,,,,,,,,,,,,,
+34,METHOD,,Free_Pointer,void Free_Pointer (ANY),,,"void Free_Pointer(SOURCE_STRING)
+{
+  wchar_t * data;
+  data = (wchar_t *)malloc(100*sizeof(wchar_t));
+  if (data == NULL) {exit(-1);}
+  data[0] = L'\0';
+  wcscpy(data, SOURCE_STRING);
+  badStatic = 1;
+  basSink(data);
+}",1.0,,,16.0,2.0,,,,,badSink.c:<global>,TYPE_DECL,1.0,badSink.c,Free_Pointer,,False,25.0,,,,,,,,,,,,,,,,,
+87,METHOD,,<global>,,,,<global>,,,,1.0,1.0,,,,,<includes>:<global>,NAMESPACE_BLOCK,,<includes>,<includes>:<global>,,False,,,,,,,,,,,,,,,,,,
+94,METHOD,,<operator>.notEquals,,,,<empty>,,,,,0.0,,,,,<global>,NAMESPACE_BLOCK,,<empty>,<operator>.notEquals,,True,,,,,,,,,,,,,,,,,,
+99,METHOD,,<operator>.indirection,,,,<empty>,,,,,0.0,,,,,<global>,NAMESPACE_BLOCK,,<empty>,<operator>.indirection,,True,,,,,,,,,,,,,,,,,,
+103,METHOD,,<operator>.postIncrement,,,,<empty>,,,,,0.0,,,,,<global>,NAMESPACE_BLOCK,,<empty>,<operator>.postIncrement,,True,,,,,,,,,,,,,,,,,,
+107,METHOD,,<operator>.equals,,,,<empty>,,,,,0.0,,,,,<global>,NAMESPACE_BLOCK,,<empty>,<operator>.equals,,True,,,,,,,,,,,,,,,,,,
+112,METHOD,,printLine,,,,<empty>,,,,,0.0,,,,,<global>,NAMESPACE_BLOCK,,<empty>,printLine,,True,,,,,,,,,,,,,,,,,,
+116,METHOD,,<operator>.assignment,,,,<empty>,,,,,0.0,,,,,<global>,NAMESPACE_BLOCK,,<empty>,<operator>.assignment,,True,,,,,,,,,,,,,,,,,,
+121,METHOD,,<operator>.cast,,,,<empty>,,,,,0.0,,,,,<global>,NAMESPACE_BLOCK,,<empty>,<operator>.cast,,True,,,,,,,,,,,,,,,,,,
+126,METHOD,,malloc,,,,<empty>,,,,,0.0,,,,,<global>,NAMESPACE_BLOCK,,<empty>,malloc,,True,,,,,,,,,,,,,,,,,,
+130,METHOD,,<operator>.multiplication,,,,<empty>,,,,,0.0,,,,,<global>,NAMESPACE_BLOCK,,<empty>,<operator>.multiplication,,True,,,,,,,,,,,,,,,,,,
+135,METHOD,,<operator>.sizeOf,,,,<empty>,,,,,0.0,,,,,<global>,NAMESPACE_BLOCK,,<empty>,<operator>.sizeOf,,True,,,,,,,,,,,,,,,,,,
+139,METHOD,,exit,,,,<empty>,,,,,0.0,,,,,<global>,NAMESPACE_BLOCK,,<empty>,exit,,True,,,,,,,,,,,,,,,,,,
+143,METHOD,,<operator>.minus,,,,<empty>,,,,,0.0,,,,,<global>,NAMESPACE_BLOCK,,<empty>,<operator>.minus,,True,,,,,,,,,,,,,,,,,,
+147,METHOD,,<operator>.indirectIndexAccess,,,,<empty>,,,,,0.0,,,,,<global>,NAMESPACE_BLOCK,,<empty>,<operator>.indirectIndexAccess,,True,,,,,,,,,,,,,,,,,,
+152,METHOD,,wcscpy,,,,<empty>,,,,,0.0,,,,,<global>,NAMESPACE_BLOCK,,<empty>,wcscpy,,True,,,,,,,,,,,,,,,,,,
+157,METHOD,,basSink,,,,<empty>,,,,,0.0,,,,,<global>,NAMESPACE_BLOCK,,<empty>,basSink,,True,,,,,,,,,,,,,,,,,,
+11,IDENTIFIER,,basStatic,,-1.0,,basStatic,6.0,,,3.0,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+17,IDENTIFIER,,data,,1.0,,data,13.0,,,5.0,1.0,,wchar_t*,,,,,,,,,,,,,,,,,,,,,,,,,,,
+20,IDENTIFIER,,data,,1.0,,data,28.0,,,5.0,1.0,,wchar_t*,,,,,,,,,,,,,,,,,,,,,,,,,,,
+25,IDENTIFIER,,data,,1.0,,data,12.0,,,7.0,1.0,,wchar_t*,,,,,,,,,,,,,,,,,,,,,,,,,,,
+26,IDENTIFIER,,SEARCH_CHAR,,2.0,,SEARCH_CHAR,20.0,,,7.0,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+39,IDENTIFIER,,data,,1.0,,data,3.0,,,19.0,1.0,,wchar_t*,,,,,,,,,,,,,,,,,,,,,,,,,,,
+46,IDENTIFIER,,wchar_t,,1.0,,wchar_t,39.0,,,19.0,1.0,,wchar_t,,,,,,,,,,,,,,,,,,,,,,,,,,,
+49,IDENTIFIER,,data,,1.0,,data,7.0,,,20.0,1.0,,wchar_t*,,,,,,,,,,,,,,,,,,,,,,,,,,,
+50,IDENTIFIER,,,,2.0,,,15.0,,,20.0,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+57,IDENTIFIER,,data,,1.0,,data,3.0,,,21.0,1.0,,wchar_t*,,,,,,,,,,,,,,,,,,,,,,,,,,,
+61,IDENTIFIER,,data,,1.0,,data,10.0,,,22.0,1.0,,wchar_t*,,,,,,,,,,,,,,,,,,,,,,,,,,,
+62,IDENTIFIER,,SOURCE_STRING,,2.0,,SOURCE_STRING,16.0,,,22.0,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+64,IDENTIFIER,,badStatic,,1.0,,badStatic,3.0,,,23.0,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+67,IDENTIFIER,,data,,1.0,,data,11.0,,,24.0,1.0,,wchar_t*,,,,,,,,,,,,,,,,,,,,,,,,,,,
+18,LITERAL,,,,2.0,,L'\0',21.0,,,5.0,2.0,,char,,,,,,,,,,,,,,,,,,,,,,,,,,,
+29,LITERAL,,,,1.0,,"""We have a match!""",19.0,,,9.0,1.0,,char,,,,,,,,,,,,,,,,,,,,,,,,,,,
+44,LITERAL,,,,1.0,,100,28.0,,,19.0,1.0,,int,,,,,,,,,,,,,,,,,,,,,,,,,,,
+54,LITERAL,,,,1.0,,1,28.0,,,20.0,1.0,,int,,,,,,,,,,,,,,,,,,,,,,,,,,,
+58,LITERAL,,,,2.0,,0,8.0,,,21.0,2.0,,int,,,,,,,,,,,,,,,,,,,,,,,,,,,
+59,LITERAL,,,,2.0,,L'\0',13.0,,,21.0,2.0,,char,,,,,,,,,,,,,,,,,,,,,,,,,,,
+65,LITERAL,,,,2.0,,1,15.0,,,23.0,2.0,,int,,,,,,,,,,,,,,,,,,,,,,,,,,,
+71,TYPE,,ANY,,,,,,,,,,,,,,,,,,ANY,,,,,,ANY,,,,,,,,,,,,,,
+72,TYPE,,char,,,,,,,,,,,,,,,,,,char,,,,,,char,,,,,,,,,,,,,,
+73,TYPE,,free,,,,,,,,,,,,,,,,,,free,,,,,,free,,,,,,,,,,,,,,
+74,TYPE,,int,,,,,,,,,,,,,,,,,,int,,,,,,int,,,,,,,,,,,,,,
+75,TYPE,,void,,,,,,,,,,,,,,,,,,void,,,,,,void,,,,,,,,,,,,,,
+76,TYPE,,wchar_t,,,,,,,,,,,,,,,,,,wchar_t,,,,,,wchar_t,,,,,,,,,,,,,,
+77,TYPE,,wchar_t*,,,,,,,,,,,,,,,,,,wchar_t*,,,,,,wchar_t*,,,,,,,,,,,,,,
+31,LOCAL,,,,,,free ,9.0,,,13.0,2.0,,free,,,,,,,,,,,,,,,,,,,,,,,,,,,
+37,LOCAL,,data,,,,wchar_t* data,11.0,,,18.0,1.0,,wchar_t*,,,,,,,,,,,,,,,,,,,,,,,,,,,
+85,FILE,,<includes>,,,,<empty>,,,,,1.0,,,,,,,,,,,,,,,,,,<empty>,,,,,,,,,,,
+91,FILE,,<unknown>,,,,<empty>,,,,,0.0,,,,,,,,,,,,,,,,,,<empty>,,,,,,,,,,,
+92,FILE,,badSink.c,,,,<empty>,,,,,0.0,,,,,,,,,,,,,,,,,,<empty>,,,,,,,,,,,
+1,META_DATA,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,NEWC,base;controlflow;typerel;callgraph;dataflowOss,/home/revo/code_analysis/test,0.1,,,,,,
+8,METHOD_PARAMETER_IN,,data,,,,wchar_t * data,21.0,,,1.0,1.0,,wchar_t*,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+35,METHOD_PARAMETER_IN,,SOURCE_STRING,,,,SOURCE_STRING,19.0,,,16.0,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+95,METHOD_PARAMETER_IN,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+96,METHOD_PARAMETER_IN,,p2,,,,p2,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,2.0,False,,,
+100,METHOD_PARAMETER_IN,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+104,METHOD_PARAMETER_IN,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+108,METHOD_PARAMETER_IN,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+109,METHOD_PARAMETER_IN,,p2,,,,p2,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,2.0,False,,,
+113,METHOD_PARAMETER_IN,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+117,METHOD_PARAMETER_IN,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+118,METHOD_PARAMETER_IN,,p2,,,,p2,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,2.0,False,,,
+122,METHOD_PARAMETER_IN,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+123,METHOD_PARAMETER_IN,,p2,,,,p2,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,2.0,False,,,
+127,METHOD_PARAMETER_IN,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+131,METHOD_PARAMETER_IN,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+132,METHOD_PARAMETER_IN,,p2,,,,p2,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,2.0,False,,,
+136,METHOD_PARAMETER_IN,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+140,METHOD_PARAMETER_IN,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+144,METHOD_PARAMETER_IN,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+148,METHOD_PARAMETER_IN,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+149,METHOD_PARAMETER_IN,,p2,,,,p2,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,2.0,False,,,
+153,METHOD_PARAMETER_IN,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+154,METHOD_PARAMETER_IN,,p2,,,,p2,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,2.0,False,,,
+158,METHOD_PARAMETER_IN,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+161,METHOD_PARAMETER_OUT,,data,,,,wchar_t * data,21.0,,,1.0,1.0,,wchar_t*,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+162,METHOD_PARAMETER_OUT,,SOURCE_STRING,,,,SOURCE_STRING,19.0,,,16.0,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+163,METHOD_PARAMETER_OUT,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+164,METHOD_PARAMETER_OUT,,p2,,,,p2,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,2.0,False,,,
+165,METHOD_PARAMETER_OUT,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+166,METHOD_PARAMETER_OUT,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+167,METHOD_PARAMETER_OUT,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+168,METHOD_PARAMETER_OUT,,p2,,,,p2,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,2.0,False,,,
+169,METHOD_PARAMETER_OUT,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+170,METHOD_PARAMETER_OUT,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+171,METHOD_PARAMETER_OUT,,p2,,,,p2,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,2.0,False,,,
+172,METHOD_PARAMETER_OUT,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+173,METHOD_PARAMETER_OUT,,p2,,,,p2,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,2.0,False,,,
+174,METHOD_PARAMETER_OUT,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+175,METHOD_PARAMETER_OUT,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+176,METHOD_PARAMETER_OUT,,p2,,,,p2,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,2.0,False,,,
+177,METHOD_PARAMETER_OUT,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+178,METHOD_PARAMETER_OUT,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+179,METHOD_PARAMETER_OUT,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+180,METHOD_PARAMETER_OUT,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+181,METHOD_PARAMETER_OUT,,p2,,,,p2,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,2.0,False,,,
+182,METHOD_PARAMETER_OUT,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+183,METHOD_PARAMETER_OUT,,p2,,,,p2,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,2.0,False,,,
+184,METHOD_PARAMETER_OUT,,p1,,,,p1,,,,,1.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,1.0,False,,,
+32,METHOD_RETURN,,,,,,RET,1.0,,,1.0,3.0,,void,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,,,,,
+68,METHOD_RETURN,,,,,,RET,1.0,,,16.0,3.0,,void,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,,,,,
+70,METHOD_RETURN,,,,,,RET,1.0,,,1.0,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,,,,,
+89,METHOD_RETURN,,,,,,RET,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,,,,,
+98,METHOD_RETURN,,,,,,RET,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,,,,,
+102,METHOD_RETURN,,,,,,RET,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,,,,,
+106,METHOD_RETURN,,,,,,RET,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,,,,,
+111,METHOD_RETURN,,,,,,RET,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,,,,,
+115,METHOD_RETURN,,,,,,RET,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,,,,,
+120,METHOD_RETURN,,,,,,RET,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,,,,,
+125,METHOD_RETURN,,,,,,RET,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,,,,,
+129,METHOD_RETURN,,,,,,RET,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,,,,,
+134,METHOD_RETURN,,,,,,RET,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,,,,,
+138,METHOD_RETURN,,,,,,RET,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,,,,,
+142,METHOD_RETURN,,,,,,RET,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,,,,,
+146,METHOD_RETURN,,,,,,RET,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,,,,,
+151,METHOD_RETURN,,,,,,RET,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,,,,,
+156,METHOD_RETURN,,,,,,RET,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,,,,,
+160,METHOD_RETURN,,,,,,RET,,,,,2.0,,ANY,,,,,,,,,,,,,,,,,,,,,,BY_VALUE,,,,,
+2,NAMESPACE_BLOCK,,<global>,,,,<empty>,,,,,1.0,,,,,,,,<unknown>,<global>,,,,,,,,,,,,,,,,,,,,
+3,NAMESPACE_BLOCK,,<global>,,,,<empty>,,,,,1.0,,,,,,,,badSink.c,badSink.c:<global>,,,,,,,,,,,,,,,,,,,,
+86,NAMESPACE_BLOCK,,<global>,,,,<empty>,,,,,1.0,,,,,,,,<includes>,<includes>:<global>,,,,,,,,,,,,,,,,,,,,
+93,NAMESPACE,,<global>,,,,<empty>,,,,,-1.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+4,TYPE_DECL,,<global>,,,,<global>,1.0,,,1.0,1.0,,,,,badSink.c:<global>,NAMESPACE_BLOCK,,badSink.c,badSink.c:<global>,,False,,,,,,,,,,,,,,,,,,
+78,TYPE_DECL,,ANY,,,,ANY,,,,,-1.0,,,,,<includes>:<global>,NAMESPACE_BLOCK,,<includes>,ANY,,True,,,,,,,,,,,,,,,,,,
+79,TYPE_DECL,,char,,,,char,,,,,-1.0,,,,,<includes>:<global>,NAMESPACE_BLOCK,,<includes>,char,,True,,,,,,,,,,,,,,,,,,
+80,TYPE_DECL,,free,,,,free,,,,,-1.0,,,,,<includes>:<global>,NAMESPACE_BLOCK,,<includes>,free,,True,,,,,,,,,,,,,,,,,,
+81,TYPE_DECL,,int,,,,int,,,,,-1.0,,,,,<includes>:<global>,NAMESPACE_BLOCK,,<includes>,int,,True,,,,,,,,,,,,,,,,,,
+82,TYPE_DECL,,void,,,,void,,,,,-1.0,,,,,<includes>:<global>,NAMESPACE_BLOCK,,<includes>,void,,True,,,,,,,,,,,,,,,,,,
+83,TYPE_DECL,,wchar_t,,,,wchar_t,,,,,-1.0,,,,,<includes>:<global>,NAMESPACE_BLOCK,,<includes>,wchar_t,,True,,,,,,,,,,,,,,,,,,
+84,TYPE_DECL,,wchar_t*,,,,wchar_t*,,,,,-1.0,,,,,<includes>:<global>,NAMESPACE_BLOCK,,<includes>,wchar_t*,,True,,,,,,,,,,,,,,,,,,
+41,UNKNOWN,,,,1.0,,wchar_t *,11.0,,,19.0,1.0,,<empty>,,CASTTypeId,,,,,,,,,,,,,,,,,,,,,,,,,<empty>
